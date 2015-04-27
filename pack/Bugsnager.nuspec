@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>Bugsnager</id>
+		<version>0.1.0.0</version>
+		<title>Bugsnager</title>
+		<authors>Alexander Gerasimov</authors>
+		<owners>SPB TV AG</owners>
+		<projectUrl>https://github.com/spbtv/Bugsnager</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Bugsnager error tracking client for windows phone</description>
+		<licenseUrl>https://github.com/SPBTV/Airbraker/blob/master/LICENSE</licenseUrl>
+		<summary />
+		<copyright>Copyright 2014 SPB TV AG</copyright>
+		<tags>bugsnag, bugsnager, error tracking, windows phone</tags>
+		<dependencies>
+		  <dependency id="Newtonsoft.Json" version="6.0.8" targetFramework="portable-win81+wpa81" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="..\Source\Common\Bugsnager\bin\Release\Bugsnager.dll" target="lib\portable-win81+wpa81\Bugsnager.dll" />	
+	</files>
+</package>
