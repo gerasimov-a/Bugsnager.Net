@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using Bugsnager.ConfigurationStorage;
 using Bugsnager.Handlers;
+using Bugsnager.Payload.Device;
 
 namespace Bugsnager.Clients
 {
@@ -55,6 +56,11 @@ namespace Bugsnager.Clients
         public Client(IConfigurationStorage configStorage)
         {
             Initialize(configStorage);
+        }
+
+        public Client(IConfigurationStorage configStorage, MobileDeviceInfo deviceInfo)
+        {
+            Initialize(configStorage, deviceInfo);
         }
 
         /// <summary>
@@ -157,7 +163,8 @@ namespace Bugsnager.Clients
         /// Initialize the client with dependencies
         /// </summary>
         /// <param name="configStorage">The configuration to use</param>
-        protected void Initialize(IConfigurationStorage configStorage)
+        /// <param name="deviceInfo">Information about device</param>
+        protected void Initialize(IConfigurationStorage configStorage, MobileDeviceInfo deviceInfo=null)
         {
             if (configStorage == null || string.IsNullOrEmpty(configStorage.ApiKey) || !_apiRegex.IsMatch(configStorage.ApiKey))
             {
@@ -166,7 +173,7 @@ namespace Bugsnager.Clients
             }
             else
             {
-                Config = new Configuration(configStorage);
+                Config = new Configuration(configStorage, deviceInfo);
                 Notifier = new Notifier(Config);
 
                 // Install a default exception handler with this client

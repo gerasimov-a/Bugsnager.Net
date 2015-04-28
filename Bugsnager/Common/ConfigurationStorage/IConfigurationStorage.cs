@@ -84,11 +84,5 @@ namespace Bugsnager.ConfigurationStorage
         /// prevent sensitive information being sent to Bugsnag.
         /// </summary>
         string[] MetadataFilters { get; set; }
-
-
-        /// <summary>
-        /// Gets or Sets information about mobile device
-        /// </summary>
-        MobileDeviceInfo DeviceInfo { get; set; }
     }
 }

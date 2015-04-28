@@ -157,17 +157,14 @@ namespace Bugsnager
             set { Storage.MetadataFilters = value; }
         }
 
-        public MobileDeviceInfo DeviceInfo 
-        {
-            get { return Storage.DeviceInfo; }
-            set { Storage.DeviceInfo = value; } 
-        }
         #endregion
 
         /// <summary>
         /// Gets the metadata to send with every error report
         /// </summary>
         public Metadata Metadata { get; protected set; }
+
+        public MobileDeviceInfo DeviceInfo { get; protected set; }
 
         /// <summary>
         /// Gets the endpoint URL that notifications will be send to
@@ -196,23 +193,15 @@ namespace Bugsnager
         protected IConfigurationStorage Storage { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration"/> class. Produces a default configuration with 
-        /// default configuration settings
-        /// </summary>
-        /// <param name="apiKey">The API key linked to a Bugsnag account</param>
-        public Configuration(string apiKey)
-            : this(new BaseStorage(apiKey))
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="Configuration"/> class. Uses the passed
         /// configuration storage to populate its settings.
         /// </summary>
         /// <param name="storage">The storage to use for settings.</param>
-        public Configuration(IConfigurationStorage storage)
+        /// <param name="deviceInfo">Information about device</param>
+        public Configuration(IConfigurationStorage storage, MobileDeviceInfo deviceInfo)
         {
             Storage = storage;
+            DeviceInfo = deviceInfo;
             Metadata = new Metadata();
             BeforeNotifyCallbacks = new List<Func<Event, bool>>();
             InternalBeforeNotifyCallbacks = new List<Action<Event>>();
