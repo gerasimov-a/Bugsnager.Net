@@ -13,11 +13,11 @@
 		<summary />
 		<copyright>Copyright 2014 SPB TV AG</copyright>
 		<tags>bugsnag, bugsnager, error tracking, windows phone</tags>
-		<dependencies>
+		<!-- <dependencies>
 		  <dependency id="Newtonsoft.Json" version="6.0.8" targetFramework="portable-win81+wpa81" />
-		</dependencies>
+		</dependencies> -->
 	</metadata>
 	<files>
-		<file src="..\Source\Common\Bugsnager\bin\Release\Bugsnager.dll" target="lib\portable-win81+wpa81\Bugsnager.dll" />	
+		<file src="..\Source\Common\Bugsnager\bin\Release\Bugsnager.dll" target="lib\portable-win81+wpa81\Bugsnager.dll" />
 	</files>
 </package>
