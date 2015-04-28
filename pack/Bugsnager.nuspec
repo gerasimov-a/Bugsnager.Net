@@ -18,6 +18,6 @@
 		</dependencies> -->
 	</metadata>
 	<files>
-		<file src="..\Source\Common\Bugsnager\bin\Release\Bugsnager.dll" target="lib\portable-win81+wpa81\Bugsnager.dll" />
+		<file src="..\Bugsnager\Common\bin\Release\Bugsnager.dll" target="lib\portable-win81+wpa81\Bugsnager.dll" />
 	</files>
 </package>
