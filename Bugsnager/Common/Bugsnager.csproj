@@ -58,7 +58,6 @@
     <Compile Include="Payload\App\AppStateInfo.cs" />
     <Compile Include="Payload\Core\NotiferInfo.cs" />
     <Compile Include="Payload\Core\UserInfo.cs" />
-    <Compile Include="Payload\Device\DeviceInfo.cs" />
     <Compile Include="Payload\Device\DeviceStateInfo.cs" />
     <Compile Include="Payload\Device\MobileDeviceInfo.cs" />
     <Compile Include="Payload\Event\EventInfo.cs" />
