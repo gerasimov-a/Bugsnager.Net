@@ -8,10 +8,10 @@
 		<owners>SPB TV AG</owners>
 		<projectUrl>https://github.com/spbtv/Bugsnager</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Bugsnager error tracking client for windows phone</description>
+		<description>Bugsnag error tracking PCL for Windows 8.1 and Windows Phone 8.1 support.</description>
 		<licenseUrl>https://github.com/SPBTV/Bugsnager/blob/master/LICENSE</licenseUrl>
 		<summary />
-		<copyright>Copyright 2014 SPB TV AG</copyright>
+		<copyright>Copyright 2015 SPB TV AG</copyright>
 		<tags>bugsnag, bugsnager, error tracking, windows phone</tags>
 		<dependencies>
 		  <dependency id="Newtonsoft.Json" version="6.0.8" />
