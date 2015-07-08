@@ -63,14 +63,12 @@ namespace Bugsnager
                 Name = errorData.UserName
             };
 
-            var deviceInfo = Config.DeviceInfo;
-
             var eventInfo = new EventInfo
             {
                 App = appInfo,
-                Device = deviceInfo,
+                Device = Config.DeviceInfo,
                 Severity = errorData.Severity,
-                User = userInfo,
+                //User = userInfo,
                 Context = errorData.Context,
                 GroupingHash = errorData.GroupingHash,
                 Exceptions = new List<ExceptionInfo>()

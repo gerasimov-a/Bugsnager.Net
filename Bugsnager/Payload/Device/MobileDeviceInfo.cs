@@ -39,5 +39,11 @@ namespace Bugsnager.Payload.Device
         /// </summary>
         [JsonProperty("deviceTimeZone")]
         public string DeviceTimezone { get; set; }
+
+        /// <summary>
+        /// Gets the device timezone
+        /// </summary>
+        [JsonProperty("deviceId")]
+        public string DeviceId { get; set; }
     }
 }
