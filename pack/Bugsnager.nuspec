@@ -8,8 +8,8 @@
 		<owners>SPB TV AG</owners>
 		<projectUrl>https://github.com/spbtv/Bugsnager</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Bugsnager error tracking client for windows phone</description>
-		<licenseUrl>https://github.com/SPBTV/Airbraker/blob/master/LICENSE</licenseUrl>
+		<description>Bugsnag error tracking PCL for Windows 8.1 and Windows Phone 8.1 support.</description>
+		<licenseUrl>https://github.com/SPBTV/Bugsnager/blob/master/LICENSE</licenseUrl>
 		<summary />
 		<copyright>Copyright 2015 SPB TV AG</copyright>
 		<tags>bugsnag, bugsnager, error tracking, windows phone</tags>
@@ -18,6 +18,6 @@
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="..\Source\Common\Bugsnager\bin\Release\Bugsnager.dll" target="lib\portable-win81+wpa81\Bugsnager.dll" />	
+		<file src="..\Bugsnager\Common\bin\Release\Bugsnager.dll" target="lib\portable-win81+wpa81\Bugsnager.dll" />
 	</files>
 </package>
