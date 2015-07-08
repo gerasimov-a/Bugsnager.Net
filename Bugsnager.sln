@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bugsnager", "Bugsnager\Common\Bugsnager.csproj", "{69AA00CA-9180-480A-B0EC-88E124F86400}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bugsnager", "Bugsnager\Bugsnager.csproj", "{69AA00CA-9180-480A-B0EC-88E124F86400}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
