@@ -19,7 +19,7 @@ namespace Bugsnager.Payload.Device
         /// <summary>
         /// Gets the type of connection (wifi or 3g)
         /// </summary>
-        [JsonProperty("connetctionType")]
+        [JsonProperty("connectionType")]
         public string ConnectionType { get; set; }
 
         /// <summary>
@@ -33,6 +33,12 @@ namespace Bugsnager.Payload.Device
         /// </summary>
         [JsonProperty("deviceRegion")]
         public string DeviceGeographicRegion { get; set; }
+
+        /// <summary>
+        /// Gets the manufacturer of the device 
+        /// </summary>
+        [JsonProperty("deviceManufacturer")]
+        public string DeviceManufacturer { get; set; }
 
         /// <summary>
         /// Gets the device timezone
