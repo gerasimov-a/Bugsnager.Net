@@ -51,5 +51,11 @@ namespace Bugsnager.Payload.Device
         /// </summary>
         [JsonProperty("deviceId")]
         public string DeviceId { get; set; }
+
+        /// <summary>
+        /// Gets the region of the device 
+        /// </summary>
+        [JsonProperty("installPath")]
+        public string InstallPath { get; set; }
     }
 }
