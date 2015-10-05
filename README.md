@@ -9,11 +9,6 @@
 Install-Package Bugsnager
 ```
 
-##Resources
-
-- [Bugsnag .Net Client](https://github.com/bugsnag/bugsnag-net)
-- [Bugsnag Official Website](https://bugsnag.com/)
-
 ##Examples
 
 ```csharp
@@ -60,10 +55,10 @@ catch (Exception ex)
 }
 ```
 
-If you cannot access the ___[CallerMemberName], [CallerFilePath] and [CallerLineNumber]___ attribtues, then install the __Microsoft BCL Portability Pack__ from NuGet:
-```powershell
-PM> Install-Package Microsoft.Bcl
-```
+##Resources
+
+- [Bugsnag .Net Client](https://github.com/bugsnag/bugsnag-net)
+- [Bugsnag Official Website](https://bugsnag.com/)
 
 ##License
 
