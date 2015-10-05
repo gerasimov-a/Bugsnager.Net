@@ -40,7 +40,7 @@ namespace Bugsnager
         private async void Send(Notification notification)
         {
             //  Post JSON to server:
-            var request = WebRequest.Create(Config.EndpointUrl);
+            var request = (HttpWebRequest)(WebRequest.Create(Config.EndpointUrl));
 
             request.Method = "POST";
             request.ContentType = "application/json";
@@ -53,7 +53,15 @@ namespace Bugsnager
                 streamWriter.Flush();
             }
 
-            var response = await request.GetResponseAsync();
+            //TODO: add some checks
+            try
+            {
+                var response = await request.GetResponseAsync();
+            }
+            catch (WebException)
+            {
+                return;
+            }
         }
     }
 }
