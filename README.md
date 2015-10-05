@@ -11,9 +11,59 @@ Install-Package Bugsnager
 
 ##Resources
 
-- [Documentation](Docs)
 - [Bugsnag .Net Client](https://github.com/bugsnag/bugsnag-net)
 - [Bugsnag Official Website](https://bugsnag.com/)
+
+##Examples
+
+```csharp
+
+namespace Bugsnag
+{
+    public static class BugsnagTracker
+    {
+        public void Report(Exception exception)
+        {
+            _bugsnagClient.Notify(exception, Severity.Error, metadata);
+        }
+    }
+}
+```
+
+To configure the Bugsnager client:
+
+```csharp
+ var config = new BaseStorage("Your api-key")
+           {
+               AppVersion = ApplicationSettings.Default.AppVersion,
+#if !DEBUG
+                ReleaseStage = "production",
+#else
+               ReleaseStage = "development",
+#endif
+               UserId = "user_device_id (not necessary)"
+           };
+	_bugsnagClient = new Client(config);
+
+```
+
+Using the client:
+
+```csharp
+try
+{
+    //Routine throws an exception
+}
+catch (Exception ex)
+{
+    BugsnagTracker.Report(ex);
+}
+```
+
+If you cannot access the ___[CallerMemberName], [CallerFilePath] and [CallerLineNumber]___ attribtues, then install the __Microsoft BCL Portability Pack__ from NuGet:
+```powershell
+PM> Install-Package Microsoft.Bcl
+```
 
 ##License
 
